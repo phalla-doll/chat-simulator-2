@@ -48,10 +48,12 @@ export function MessengerTheme({ messages, personAName, personBName }: ThemeProp
             
             return (
               <motion.div
+                layout
                 key={msg.id}
-                initial={{ opacity: 0, y: 10, scale: 0.98 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.25, ease: [0.2, 0.8, 0.2, 1] }}
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                style={{ transformOrigin: isRight ? 'bottom right' : 'bottom left' }}
                 className={`flex ${isRight ? 'justify-end' : 'justify-start items-end space-x-2'} ${spacingClass}`}
               >
                 {!isRight && (
