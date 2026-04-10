@@ -1,5 +1,6 @@
 import React from 'react';
 import { Theme, PlaybackSpeed } from '@/lib/chat';
+import { ChevronDown } from 'lucide-react';
 
 interface ConversationEditorProps {
   script: string;
@@ -36,15 +37,20 @@ export function ConversationEditor({
             <label className="block text-[12px] font-medium text-gray-400 mb-1.5">
               Theme
             </label>
-            <select
-              value={theme}
-              onChange={(e) => setTheme(e.target.value as Theme)}
-              className="w-full bg-[#2A2A2A] border border-[#3E3E3E] rounded-lg px-3 py-2 text-[13px] text-gray-200 focus:outline-none focus:border-[#3ECF8E] focus:ring-1 focus:ring-[#3ECF8E] transition-colors"
-            >
-              <option value="imessage">iMessage</option>
-              <option value="instagram">Instagram DMs</option>
-              <option value="messenger">Messenger</option>
-            </select>
+            <div className="relative">
+              <select
+                value={theme}
+                onChange={(e) => setTheme(e.target.value as Theme)}
+                className="w-full appearance-none bg-[#2A2A2A] border border-[#3E3E3E] rounded-lg pl-3 pr-10 py-2 text-[13px] text-gray-200 focus:outline-none focus:border-[#3ECF8E] focus:ring-1 focus:ring-[#3ECF8E] transition-colors"
+              >
+                <option value="imessage">iMessage</option>
+                <option value="instagram">Instagram DMs</option>
+                <option value="messenger">Messenger</option>
+              </select>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                <ChevronDown className="w-4 h-4" />
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
