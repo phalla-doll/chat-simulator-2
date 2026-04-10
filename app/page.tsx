@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <main className="flex h-screen w-full bg-white overflow-hidden font-sans">
       {/* Left Panel: Editor & Controls */}
-      <div className="w-[400px] flex flex-col flex-shrink-0 border-r border-gray-200 z-10 shadow-sm relative">
+      <div className="w-[360px] flex flex-col flex-shrink-0 border-r border-gray-100 bg-[#f9f9f9] z-10 relative">
         <div className="flex-1 overflow-hidden">
           <ConversationEditor
             script={script}
