@@ -1,0 +1,5 @@
+{
+  "name": "Chat Simulator",
+  "description": "Simulate chat conversations for screen recording",
+  "requestFramePermissions": []
+}
