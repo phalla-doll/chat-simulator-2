@@ -99,7 +99,7 @@ export function IMessageTheme({ messages, personAName, personBName }: ThemeProps
                 className={`flex ${isRight ? 'justify-end' : 'justify-start'} ${spacingClass}`}
               >
                 <div
-                  className={`relative max-w-[260px] px-[14px] py-[7px] text-[17px] leading-[22px] tracking-[-0.01em] ${
+                  className={`relative z-0 max-w-[260px] px-[14px] py-[7px] text-[17px] leading-[22px] tracking-[-0.01em] ${
                     isRight
                       ? 'bg-[#007AFF] text-white'
                       : 'bg-[#E9E9EB] text-black'
