@@ -29,9 +29,9 @@ export default function Home() {
   );
 
   return (
-    <main className="flex h-screen w-full bg-white overflow-hidden font-sans">
+    <main className="flex h-screen w-full bg-[#1C1C1C] overflow-hidden font-sans text-gray-200">
       {/* Left Panel: Editor & Controls */}
-      <div className="w-[360px] flex flex-col flex-shrink-0 border-r border-gray-100 bg-[#f9f9f9] z-10 relative">
+      <div className="w-[360px] flex flex-col flex-shrink-0 border-r border-[#2A2A2A] bg-[#1C1C1C] z-10 relative">
         <div className="flex-1 overflow-hidden">
           <ConversationEditor
             script={script}

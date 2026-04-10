@@ -44,9 +44,9 @@ export function ChatPreview({
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center bg-white p-8 overflow-hidden">
+    <div className="flex-1 flex items-center justify-center bg-[#1C1C1C] p-8 overflow-hidden">
       {/* Phone container */}
-      <div className="relative w-[393px] h-[852px] bg-white rounded-[55px] shadow-[0_0_50px_rgba(0,0,0,0.05)] border-[14px] border-black flex flex-col overflow-hidden ring-1 ring-gray-200/50">
+      <div className="relative w-[393px] h-[852px] bg-white rounded-[55px] shadow-[0_0_50px_rgba(0,0,0,0.5)] border-[14px] border-black flex flex-col overflow-hidden ring-1 ring-white/10">
         
         {/* Hardware buttons */}
         <div className="absolute -left-[16px] top-[120px] w-[2px] h-[32px] bg-black rounded-l-md"></div>
