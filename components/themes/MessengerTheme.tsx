@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Message } from '@/lib/chat';
-import { ChevronLeft, Phone, Video } from 'lucide-react';
+import { ArrowLeft, Phone, Video } from 'lucide-react';
 
 interface ThemeProps {
   messages: Message[];
@@ -13,9 +13,9 @@ export function MessengerTheme({ messages, personAName, personBName }: ThemeProp
   return (
     <div className="flex flex-col min-h-full bg-white font-sans">
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-white/90 backdrop-blur-md pt-12 pb-2 px-3 flex items-center justify-between shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
-        <div className="flex items-center space-x-1">
-          <ChevronLeft className="w-8 h-8 text-[#0084ff] -ml-1" strokeWidth={2} />
+      <div className="sticky top-0 z-40 bg-white/90 backdrop-blur-md pt-14 pb-2 px-3 flex items-center justify-between shadow-[0_1px_2px_rgba(0,0,0,0.05)]">
+        <div className="flex items-center space-x-2">
+          <ArrowLeft className="w-6 h-6 text-[#0084ff] ml-1" strokeWidth={2.5} />
           <div className="flex items-center space-x-2.5">
             <div className="relative">
               <div className="w-9 h-9 rounded-full bg-gray-200 overflow-hidden">
@@ -30,7 +30,7 @@ export function MessengerTheme({ messages, personAName, personBName }: ThemeProp
             </div>
           </div>
         </div>
-        <div className="flex items-center space-x-4 text-[#0084ff] pr-1">
+        <div className="flex items-center space-x-5 text-[#0084ff] pr-2">
           <Phone className="w-6 h-6 fill-current" />
           <Video className="w-6 h-6 fill-current" />
         </div>
@@ -44,7 +44,7 @@ export function MessengerTheme({ messages, personAName, personBName }: ThemeProp
             const showAvatar = !isRight && (i === messages.length - 1 || messages[i + 1].side === 'right');
             const isFirstInGroup = i === 0 || messages[i - 1].side !== msg.side;
             const isLastInGroup = i === messages.length - 1 || messages[i + 1].side !== msg.side;
-            const spacingClass = isFirstInGroup && i !== 0 ? 'mt-3' : 'mt-[2px]';
+            const spacingClass = isFirstInGroup && i !== 0 ? 'mt-4' : 'mt-[2px]';
             
             return (
               <motion.div
@@ -55,13 +55,13 @@ export function MessengerTheme({ messages, personAName, personBName }: ThemeProp
                 className={`flex ${isRight ? 'justify-end' : 'justify-start items-end space-x-2'} ${spacingClass}`}
               >
                 {!isRight && (
-                  <div className="w-7 h-7 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden">
+                  <div className="w-7 h-7 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden mb-0.5">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     {showAvatar && <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${personBName || 'B'}`} alt="avatar" className="w-full h-full object-cover" />}
                   </div>
                 )}
                 <div
-                  className={`max-w-[240px] px-3.5 py-2 text-[15px] leading-[20px] ${
+                  className={`max-w-[240px] px-[14px] py-[8px] text-[15px] leading-[20px] ${
                     isRight
                       ? 'bg-[#0084ff] text-white'
                       : 'bg-[#e4e6eb] text-black'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Message } from '@/lib/chat';
-import { ChevronLeft, Phone, Video } from 'lucide-react';
+import { ArrowLeft, Phone, Video } from 'lucide-react';
 
 interface ThemeProps {
   messages: Message[];
@@ -13,9 +13,9 @@ export function InstagramTheme({ messages, personAName, personBName }: ThemeProp
   return (
     <div className="flex flex-col min-h-full bg-white font-sans">
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-white pt-12 pb-2 px-4 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <ChevronLeft className="w-8 h-8 text-black -ml-2" strokeWidth={1.5} />
+      <div className="sticky top-0 z-40 bg-white border-b border-gray-100 pt-14 pb-3 px-4 flex items-center justify-between">
+        <div className="flex items-center space-x-4">
+          <ArrowLeft className="w-6 h-6 text-black" strokeWidth={2} />
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -52,20 +52,20 @@ export function InstagramTheme({ messages, personAName, personBName }: ThemeProp
                 className={`flex ${isRight ? 'justify-end' : 'justify-start items-end space-x-2'} ${spacingClass}`}
               >
                 {!isRight && (
-                  <div className="w-6 h-6 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden mb-0.5">
+                  <div className="w-7 h-7 rounded-full bg-gray-200 flex-shrink-0 overflow-hidden mb-0.5">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     {showAvatar && <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=${personBName || 'B'}`} alt="avatar" className="w-full h-full object-cover" />}
                   </div>
                 )}
                 <div
-                  className={`max-w-[240px] px-4 py-[10px] text-[15px] leading-[20px] ${
+                  className={`max-w-[240px] px-[16px] py-[10px] text-[15px] leading-[20px] ${
                     isRight
                       ? 'bg-gradient-to-tr from-[#A60F93] to-[#0D94F3] text-white'
                       : 'bg-[#EFEFEF] text-black'
                   } ${
                     isRight
-                      ? `rounded-3xl ${!isFirstInGroup ? 'rounded-tr-md' : ''} ${!isLastInGroup ? 'rounded-br-md' : ''}`
-                      : `rounded-3xl ${!isFirstInGroup ? 'rounded-tl-md' : ''} ${!isLastInGroup ? 'rounded-bl-md' : ''}`
+                      ? `rounded-[22px] ${!isFirstInGroup ? 'rounded-tr-[4px]' : ''} ${!isLastInGroup ? 'rounded-br-[4px]' : ''}`
+                      : `rounded-[22px] ${!isFirstInGroup ? 'rounded-tl-[4px]' : ''} ${!isLastInGroup ? 'rounded-bl-[4px]' : ''}`
                   }`}
                 >
                   {msg.text}

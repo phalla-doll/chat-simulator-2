@@ -60,21 +60,21 @@ export function IMessageTheme({ messages, personAName, personBName }: ThemeProps
       `}</style>
 
       {/* Header */}
-      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/80 pt-12 pb-2 px-2 flex items-center justify-between">
+      <div className="sticky top-0 z-40 bg-white/85 backdrop-blur-xl border-b border-gray-200/80 pt-14 pb-2 px-2 flex items-center justify-between">
         <div className="flex items-center text-[#007AFF] w-1/3">
           <ChevronLeft className="w-7 h-7 -ml-1" strokeWidth={2.5} />
           <span className="text-[17px] -ml-1 tracking-tight">2</span>
         </div>
         <div className="flex flex-col items-center justify-center w-1/3">
-          <div className="w-11 h-11 rounded-full bg-gradient-to-b from-gray-300 to-gray-400 flex items-center justify-center text-white text-xl font-medium mb-0.5">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-b from-gray-300 to-gray-400 flex items-center justify-center text-white text-lg font-medium mb-0.5">
             {personBName.charAt(0).toUpperCase() || 'B'}
           </div>
           <div className="flex items-center">
-            <span className="text-[11px] font-medium text-black tracking-tight">{personBName || 'Person B'}</span>
-            <ChevronLeft className="w-3 h-3 text-gray-400 -rotate-90 ml-0.5" strokeWidth={3} />
+            <span className="text-[10px] font-medium text-black tracking-tight">{personBName || 'Person B'}</span>
+            <ChevronLeft className="w-2.5 h-2.5 text-gray-400 -rotate-90 ml-0.5" strokeWidth={3} />
           </div>
         </div>
-        <div className="flex items-center justify-end w-1/3 pr-2 text-[#007AFF]">
+        <div className="flex items-center justify-end w-1/3 pr-3 text-[#007AFF]">
           <Video className="w-6 h-6" strokeWidth={1.5} />
         </div>
       </div>
@@ -97,16 +97,16 @@ export function IMessageTheme({ messages, personAName, personBName }: ThemeProps
                 className={`flex ${isRight ? 'justify-end' : 'justify-start'} ${spacingClass}`}
               >
                 <div
-                  className={`relative max-w-[260px] px-[14px] py-[7px] text-[17px] leading-[22px] tracking-[-0.02em] ${
+                  className={`relative max-w-[260px] px-[14px] py-[7px] text-[17px] leading-[22px] tracking-[-0.01em] ${
                     isRight
                       ? 'bg-[#007AFF] text-white'
                       : 'bg-[#E9E9EB] text-black'
                   } ${
                     showTail && isRight
-                      ? 'rounded-2xl rounded-br-md imessage-tail-right'
+                      ? 'rounded-[18px] rounded-br-[4px] imessage-tail-right'
                       : showTail && !isRight
-                      ? 'rounded-2xl rounded-bl-md imessage-tail-left'
-                      : 'rounded-2xl'
+                      ? 'rounded-[18px] rounded-bl-[4px] imessage-tail-left'
+                      : 'rounded-[18px]'
                   }`}
                 >
                   {msg.text}
